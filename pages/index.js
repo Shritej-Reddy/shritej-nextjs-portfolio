@@ -6,7 +6,7 @@ import { useState } from "react";
 import Hero from '../components/Hero'
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : ""}>
