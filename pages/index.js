@@ -4,10 +4,24 @@ import { useState } from "react";
 
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
+import About from "../components/About";
+import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import ContactMe from "../components/ContactMe";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+
+  const downloadBtn = () => {
+    const element = document.createElement("a");
+    const file = new Blob([document.getElementById("input").value], {
+      type: "text/plain;charset=utf-8}",
+    });
+    element.href = "shritej.pdf";
+    element.download = "shritej_resume.pdf";
+    element.click();
+  };
 
   return (
     // <div className={darkMode ? "dark" : ""}>
@@ -23,22 +37,19 @@ export default function Home() {
         </Head>
 
         <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
-          <section className="min-h-screen">
-            <nav className="py-10 mb-12 flex justify-between dark:text-white">
-              <h1 className="font-burtons text-xl">DevelopedByShritej</h1>
+          <section className="min-h-screen snap-start">
+            <nav className="py-10 flex justify-between dark:text-white">
+              <h1 className="font-burtons text-xl">DEVELOPEDBYREDDY</h1>
               <ul className="flex items-center">
-                <li>
+                {/* <li>
                   <BsFillMoonStarsFill
                     onClick={() => setDarkMode(!darkMode)}
                     className=" cursor-pointer text-2xl"
                   />
-                </li>
+                </li> */}
                 <li>
-                  <a
-                    className="bg-gradient-to-r from-teal-600 text- to-teal-600 text-white px-4 py-2 border-none rounded-md ml-8"
-                    href="#"
-                  >
-                    Resume
+                  <a className="font-burtons text-xl bg-gradient-to-r from-teal-600 text- to-teal-600 text-white px-4 py-2 border-none rounded-md ml-8">
+                    <button onClick={downloadBtn}>Resume</button>
                   </a>
                 </li>
               </ul>
@@ -46,9 +57,25 @@ export default function Home() {
             <Hero />
           </section>
 
-          {/* <section id="skills" className="snap-start">
-          <Skills />
-        </section> */}
+          <section id="about" className="snap-center">
+            <About />
+          </section>
+
+          <section id="experience" className="snap-center">
+            <WorkExperience />
+          </section>
+
+          <section id="skills" className="snap-start">
+            <Skills />
+          </section>
+
+          {/* <section id="projects" className="snap-start">
+            <Projects />
+          </section>
+
+          <section id="contactMe" className="snap-start">
+            <ContactMe />
+          </section> */}
         </main>
       </div>
     </motion.div>

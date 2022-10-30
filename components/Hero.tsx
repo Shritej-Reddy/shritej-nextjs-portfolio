@@ -19,7 +19,7 @@ const Hero = (props: Props) => {
   });
   return (
     <div>
-      <div className="text-center p-10 py-10">
+      <div className="text-center p-10 py-1">
         {/* <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
           Shritej Reddy
         </h2> */}
@@ -29,7 +29,7 @@ const Hero = (props: Props) => {
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           Developer and UI/ UX Designer.
         </h2>
-        <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-10 md:h-96 md:w-96">
+        <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-10 md:h-84 md:w-84">
           <Image src={deved} layout="fill" objectFit="cover" />
         </div>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10 text-gray-800 dark:text-gray-200 py-4">
@@ -40,7 +40,7 @@ const Hero = (props: Props) => {
         <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
           Full Stack Engineer with an extensive skillset. Keen in making
           appealing designs and workflows. Feel free to get in touch, really
-          love an engaging conversation.
+          love an engaging conversation. &#x2757;&#x2757;
         </p>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
           <a href="https://github.com/Shritej-Reddy">

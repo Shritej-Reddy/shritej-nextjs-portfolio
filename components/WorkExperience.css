@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background: linear-gradient(to right, #2c5364, #203a43);
+}
+
+.card {
+    /* background: #C2CCD6; */
+    background: #80F807;
+    padding: 3rem 5rem;
+}
+
+.card p {
+    padding-top: 1rem;
+    line-height: 150%;
+    word-wrap: break-word;
+}
+
+.expand {
+    width: 20rem;
+}
