@@ -19,12 +19,12 @@ const WordExperienceCards = (props: Props) => {
           transition={{ layout: { duration: 1, type: "spring" } }}
           style={{
             borderRadius: "2rem",
-            boxShadow: "0px 10px 30px #80F807",
+            boxShadow: "0px 10px 30px #0D7E94",
             // color: "rgb(107, 114, 128, 1)"
             color: "black"
           }}
         >
-          <motion.div layout>{props.work[props.workIndex-1].company}</motion.div>
+          <motion.div className="text-white" layout>{props.work[props.workIndex-1].company}</motion.div>
           {isOpen && (
             <motion.div
               className="expand"
@@ -33,7 +33,14 @@ const WordExperienceCards = (props: Props) => {
               transition={{ duration: 1 }}
             >
               <p>{props.work[props.workIndex-1].position}</p>
-              <p>{props.work[props.workIndex-1].description}</p>
+              <ul  className="list-disc text-white">
+                <li>{props.work[props.workIndex-1].description1}</li>
+                <li>{props.work[props.workIndex-1].description2}</li>
+                <li>{props.work[props.workIndex-1].description3}</li>
+              </ul>
+              {/* <p>{props.work[props.workIndex-1].description1}</p>
+              <p>{props.work[props.workIndex-1].description2}</p>
+              <p>{props.work[props.workIndex-1].description3}</p> */}
             </motion.div>
           )}
         </motion.div>

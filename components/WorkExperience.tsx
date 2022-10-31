@@ -11,13 +11,17 @@ const WorkExperience = (props: Props) => {
             workIndex: 1,
             company: "PwC",
             position: "Full Stack Developer(Associate 2)",
-            description: "built websites lsgvnjlsxfnvjlasdfjlv jlnasfjlnadjlsfvbnljas iansfvjklasnfkjk asfdvnjkasfnjkaednkbjvinasdujvbnasjkkjasfgvbjkasfjgvbnask jasdFBjkASFBNgjkabsfgkvhjk"
+            description1: "Built an end to end serverless application based on client requirements that improved scalability, cost-effectiveness and also performance by 20% as opposed to prior application.",
+            description2: "Created various website designs as per client needs using Figma, Adobe XD. Assessed UI and UX designs for technical feasibility.",
+            description3: "Responsible for development of power apps solutions ranging from Canvas, Model Driven Apps to Dataverse, Custom Connectors, etc."
         },
         {
             workIndex: 2,
             company: "SmartVizX",
             position: "Full Stack Developer(Associate 2)",
-            description: "built websites lsgvnjlsxfnvjlasdfjlv jlnasfjlnadjlsfvbnljas iansfvjklasnfkjk asfdvnjkasfnjkaednkbjvinasdujvbnasjkkjasfgvbjkasfjgvbnask jasdFBjkASFBNgjkabsfgkvhjk"
+            description1: "Collaborated with senior leaders to create Virtual/ Augmented Reality applications that port to Windows, iOS and Android",
+            description2: "Create High Fidelity Designs for products which facilitate high quality development.",
+            description3: "Developed various VR/AR prototypes which serve as foundation for technical feasibility on a large scale."
         }
     ]
 
