@@ -15,12 +15,12 @@ export default function Home() {
 
   const downloadBtn = () => {
     const element = document.createElement("a");
-    const file = new Blob([document.getElementById("input").value], {
-      type: "text/plain;charset=utf-8}",
-    });
+    // const file = new Blob([document.getElementById("input").value], {
+    //   type: "text/plain;charset=utf-8}",
+    // });
     element.href = "shritej.pdf";
-    element.download = "shritej_resume.pdf";
-    element.click();
+    //element.download = "shritej_resume.pdf";
+    //element.click();
   };
 
   return (
@@ -48,7 +48,11 @@ export default function Home() {
                   />
                 </li> */}
                 <li>
-                  <a className="font-burtons text-xl bg-gradient-to-r from-teal-600 text- to-teal-600 text-white px-4 py-2 border-none rounded-md ml-8">
+                  <a
+                    className="font-burtons text-xl bg-gradient-to-r from-teal-600 text- to-teal-600 text-white px-4 py-2 border-none rounded-md ml-8"
+                    href= "../Shritej.pdf"
+                    target="_blank"
+                  >
                     <button onClick={downloadBtn}>Resume</button>
                   </a>
                 </li>
