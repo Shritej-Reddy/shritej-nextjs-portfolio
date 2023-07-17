@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
@@ -12,6 +12,31 @@ import ContactMe from "../components/ContactMe";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+
+  //cursor code
+  // const [mousePosition, setMousePosition] = useState({
+  //   x: 0,
+  //   y: 0
+  // });
+  // useEffect(() => {
+  //   const mouseMove = e => {
+  //     console.log(e)
+  //     setMousePosition({
+  //       x: e.clientX,
+  //       y: e.clientY
+  //     })
+  //   }
+  //   window.addEventListener("mousemove", mouseMove)
+  //   return () => {
+  //     window.removeEventListener("mousemove", mouseMove);
+  //   }
+  // }, [])
+  // const cursorVariants = {
+  //   default: {
+  //     x: mousePosition.x - 48,
+  //     y: mousePosition.y - 48
+  //   }
+  // }
 
   const downloadBtn = () => {
     const element = document.createElement("a");
@@ -31,6 +56,12 @@ export default function Home() {
       transition={{ duration: 1 }}
       className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
     >
+      {/* cursor code */}
+      {/* <motion.div
+        className="cursor bg-white h-4 w-4 rounded fixed top-10 left-10"
+        variants={cursorVariants}
+        animate="default"
+      ></motion.div> */}
       <div className={darkMode ? "dark" : ""}>
         <Head>
           <title>Shritej&apos;s Portfolio</title>
@@ -50,7 +81,7 @@ export default function Home() {
                 <li>
                   <a
                     className="font-burtons text-xl bg-gradient-to-r from-teal-600 text- to-teal-600 text-white px-4 py-2 border-none rounded-md ml-8"
-                    href= "../Shritej.pdf"
+                    href="../Shritej.pdf"
                     target="_blank"
                   >
                     <button onClick={downloadBtn}>Resume</button>
