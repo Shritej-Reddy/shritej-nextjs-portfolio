@@ -8,7 +8,7 @@ type Props = {
 
 const WordExperienceCards = (props: Props) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  console.log("Work: ", props.workIndex, props.work[props.workIndex-1].company);
+  // console.log("Work: ", props.workIndex, props.work[props.workIndex-1].company);
   return (
     <div>
       {props.work && (

@@ -50,30 +50,39 @@ const Skills1: React.FC<Props> = () => {
 
   return (
     <motion.div
-      //className="flex flex-col items-center justify-center h-screen bg-gray-900"
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Skills
       </h3>
-      
-        <motion.ul
-          className="flex flex-wrap justify-center gap-4"
-          initial="hidden"
-          animate="visible"
-          variants={itemVariants}
-        >
-          {skillsList.map((skill, index) => (
-            <motion.li
-              key={index}
-              className="p-2 bg-blue-500 text-white rounded-md text-lg" // Adjust the font size here (e.g., text-lg, text-xl, etc.)
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {skill.skill}
-            </motion.li>
-          ))}
-        </motion.ul>
+
+      <motion.ul
+        className="flex flex-wrap justify-center gap-4"
+        initial="hidden"
+        animate="visible"
+        variants={itemVariants}
+        style={{ marginBottom: "1.5rem" }} // Add margin-bottom here to create space between list items
+      >
+        {skillsList.map((skill, index) => (
+          <motion.li
+            key={index}
+            className="p-2 bg-blue-500 text-white rounded-md text-lg"
+            whileHover={{
+              scale: [1, 1.5, 1.5, 1, 1],
+            }}
+            whileTap={{ scale: 0.9 }}
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 50,
+            }}
+          >
+            {skill.skill}
+          </motion.li>
+        ))}
+      </motion.ul>
     </motion.div>
   );
 };
