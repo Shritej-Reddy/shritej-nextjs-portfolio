@@ -15,6 +15,45 @@ const Skills1 = (props: Props) => {
     visible: { opacity: 1, y: 0 },
   };
 
+  let skillsList = [
+    {
+      _id: "javascript",
+      skill: "Javascript",
+      url: "oie_1441129NsvBRCB.png",
+      progress: "80",
+    },
+    {
+      _id: "typescript",
+      skill: "Typescript",
+      url: "typescript.png",
+      progress: "80",
+    },
+    {
+      _id: "csharp",
+      skill: "C#",
+      url: "javascript.png",
+      progress: "80",
+    },
+    {
+      _id: "react",
+      skill: "React",
+      url: "javascript.png",
+      progress: "80",
+    },
+    {
+      _id: "azure",
+      skill: "Azure",
+      url: "javascript.png",
+      progress: "80",
+    },
+    {
+      _id: "sql",
+      skill: "SQL",
+      url: "mysql.png",
+      progress: "80",
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,49 +68,21 @@ const Skills1 = (props: Props) => {
         <motion.ul
           className="flex flex-wrap justify-center gap-4"
           variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.2 }}
         >
-          <motion.li
-            className="p-2 bg-blue-500 text-white rounded-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            JavaScript
-          </motion.li>
-          <motion.li
-            className="p-2 bg-blue-500 text-white rounded-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            TypeScript
-          </motion.li>
-          <motion.li
-            className="p-2 bg-blue-500 text-white rounded-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            React
-          </motion.li>
-          <motion.li
-            className="p-2 bg-blue-500 text-white rounded-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Next.js
-          </motion.li>
-          <motion.li
-            className="p-2 bg-blue-500 text-white rounded-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Node.js
-          </motion.li>
-          <motion.li
-            className="p-2 bg-blue-500 text-white rounded-md"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Azure
-          </motion.li>
+          {skillsList.map((skill, index) => (
+            <motion.li
+              key={index}
+              className="p-2 bg-blue-500 text-white rounded-md"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              variants={itemVariants}
+            >
+              {skill.skill}
+            </motion.li>
+          ))}
         </motion.ul>
       </div>
     </motion.div>
