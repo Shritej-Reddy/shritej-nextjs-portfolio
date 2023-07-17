@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
-import Skills from "../components/Skills";
+import Skills1 from "../components/Skills1";
 import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 
@@ -66,7 +66,7 @@ export default function Home() {
           </section>
 
           <section id="skills" className="snap-start">
-            <Skills />
+            <Skills1 />
           </section>
 
           {/* <section id="projects" className="snap-start">
